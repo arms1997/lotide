@@ -20,10 +20,10 @@ const assertArrayEquals = function (array1, array2) {
   console.log(`🤑🤑🤑Assertion Passed: ${array1} === ${array2}`)
 }
 
-const without = function (arr, itemsToRemove) {
-  let newArr = arr.filter((item) => !itemsToRemove.includes(item))
-  return newArr
-}
+// const without = function (arr, itemsToRemove) {
+//   let newArr = arr.filter((item) => !itemsToRemove.includes(item))
+//   return newArr
+// }
 
 // const without = function (arr, itemsToRemove) {
 //   for(let item of itemsToRemove){
@@ -46,6 +46,18 @@ const without = function (arr, itemsToRemove) {
 //   }
 //   return newArr
 // }
+
+
+const without = (source, itemsToRemove) => {
+  let resultArray = [];
+  for(let i = 0; i < source.length; i++){
+    if(!itemsToRemove.includes(source[i])){
+      resultArray.push(source[i])
+    }
+  }
+  return resultArray
+}
+
 const nums = [1, 2, 3, 4, 4, 4]
 
 console.log(without(nums, [3, 4]))
