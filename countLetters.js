@@ -9,7 +9,10 @@ const countLetters = function(string){
   let obj = {};
 
   for(let value of noSpaces){
-    if(obj[value]){
+    if(value === ' '){
+
+    }
+    else if(obj[value]){
       obj[value] += 1;
     }else{
       obj[value] = 1
