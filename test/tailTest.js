@@ -1,5 +1,5 @@
 const assert = require('chai').assert
-const tail = require('../tail')
+const tail = require('../index').tail
 
 describe('#tail', () => {
   it('should return \'2,3,4,5,6,7,8\' when passed [1, 2, 3, 4, 5, 6, 7, 8]', () => {
