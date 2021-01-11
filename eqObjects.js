@@ -59,6 +59,5 @@ assertEqual(eqObj1, true)
 let eqObj2 = eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) // => false
 assertEqual(eqObj2, false)
 
-console.log('hey')
 let eqObj3 = eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }) // => false
 assertEqual(eqObj3, false)
